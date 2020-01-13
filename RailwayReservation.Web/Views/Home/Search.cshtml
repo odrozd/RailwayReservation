@@ -1,0 +1,64 @@
+﻿@model OldRailwayReservation.DataLayer.Schedule
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<h2>Search</h2>
+
+<fieldset>
+    <legend>Schedule</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DepartureStationId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DepartureStationId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ArrivalStationId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ArrivalStationId)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ArrivalDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ArrivalDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DepartureDate)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DepartureDate)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DepartureTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DepartureTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ArrivalTime)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ArrivalTime)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TrainId)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TrainId)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ScheduleID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

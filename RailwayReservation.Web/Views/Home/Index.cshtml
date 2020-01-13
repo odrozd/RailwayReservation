@@ -1,0 +1,25 @@
+﻿@model RailwayReservation.Web.ViewModels.CityViewModel
+
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Railway Reservation</title>
+</head>
+@using (Html.BeginForm("Search", "Home", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>Schedule</legend>
+        <div>
+            @Html.DropDownListFor(m => m.SelectedDepartureStationId, Model.CitiesList, "---Select Departure Station---")
+        </div>
+        <div>
+            @Html.DropDownListFor(m => m.SelectedArrivalStationId, Model.CitiesList, "---Select Arrival Station---")
+        </div>
+
+        <p>
+            <input type="submit" value="Search" />
+        </p>
+    </fieldset>
+}
+

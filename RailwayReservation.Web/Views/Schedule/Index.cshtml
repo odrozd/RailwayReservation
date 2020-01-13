@@ -1,0 +1,59 @@
+﻿@model IEnumerable<RailwayReservation.Web.ViewModels.ScheduleViewModel>
+
+@{
+    ViewBag.Title = "Schedule Table";
+}
+
+<h2>Availble Schedules</h2>
+
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartureStation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArrivalStation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartureTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ArrivalTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TravelTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TrainNumber)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureStation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalStation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DepartureTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArrivalTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TravelTime)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrainNumber)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.ScheduleId })
+            </td>
+        </tr>
+    }
+
+</table>
